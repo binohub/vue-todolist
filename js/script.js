@@ -9,11 +9,11 @@ const list = new Vue(
 
         },
         methods: {
-            addNewToDo: function () {
+            addNewToDo: function (newText) {
                 if (this.newToDo.length > 0 && this.newToDo.length < 40) {
                     this.todos.push(
                         {
-                            text: this.newToDo,
+                            text: newText,
                             done: false,
                         },
                     )

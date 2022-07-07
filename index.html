@@ -39,8 +39,8 @@
                         </li>       
                     </ul>
 
-                    <input v-model="newToDo" @keyup.enter="addNewToDo" type="text" placeholder="New To Do?">
-                    <button @click="addNewToDo" class="btn btn-success badge badge-pill ">Click Here To Add!</button>
+                    <input v-model="newToDo" @keyup.enter="addNewToDo(newToDo)" type="text" placeholder="New To Do?">
+                    <button @click="addNewToDo(newToDo)" class="btn btn-success badge badge-pill ">Click Here To Add!</button>
                 
                 </div>
 
