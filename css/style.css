@@ -1,7 +1,8 @@
-body{
-    background-color: white;
-    color:black;
+div#root ul > li div.todo-btn{
+    cursor: pointer;
+    transition: 1s;
 }
-h1{
-    color: black;
+div#root ul > li div.todo-btn:hover {
+    filter: sepia(10);
+    transform: scale(1.2);
 }

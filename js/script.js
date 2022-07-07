@@ -5,29 +5,26 @@ const list = new Vue(
             // nuovo item da aggiungere
             newToDo: "",
             todos: [
-                {
-                    text: 'fare i compiti',
-                },
-                {
-                    text: 'fare la spesa',
-                },
-                {
-                    text: 'fare il bucato',
-                }
             ],
 
         },
         methods: {
             addNewToDo: function () {
-                if (this.newToDo.length > 0) {
+                if (this.newToDo.length > 0 && this.newToDo.length < 40) {
                     this.todos.push(
                         {
                             text: this.newToDo,
+                            done: false,
                         },
                     )
                     console.log(this.todos);
+                }else{
+                    console.warn(`il To Do deve essere superiore a 0 e inferiore ai 40 caratteri`);
                 }
                 this.newToDo = "";
+            },
+            removeNewToDo: function (indexToRemove) {
+                this.todos.splice(indexToRemove, 1);
             },
             
         },
